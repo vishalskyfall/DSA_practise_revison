@@ -1,0 +1,27 @@
+key value
+ 
+ //https://javaconceptoftheday.com/java-hashmap-programs-and-examples/
+ //techiedelight.com/hashing-in-data-structure/
+ 
+ k1 -> v1
+ k2 -> v2
+ 
+ 
+ now you're trying to add k1 -> v3 | not possible k1 already there
+ 
+ Insert,
+ Search,  all opr. are in O(1) 
+ Delete
+ 
+ all stored in random order
+ 
+ because it uses internal hashing to create diff. o/p | collisions also happen inside hash
+ 
+ h(263483) = mapped to 7 
+ h("vishal") = mapped to 5
+ h({name="any"}) = mapped to 3 like these | for java it always uses INTEGER for mapping
+ 
+ 
+ for large keys = key%m
+ string = weighted sum 
+ objects = weighted sum of elements
