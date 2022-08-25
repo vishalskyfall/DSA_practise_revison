@@ -7,7 +7,7 @@ public class Longest_consecutive_in_array {
 //	a=[3,20,9,10,1,2,5,4]
 //	 all sequences : 20, 1 2 3 4 5, 9 10 | longest : 5 (12345)
 	public static void main(String[] args) {
-		int[] a = new int[] { 3, 20, 9, 10, 1, 2, 5, 4 };
+		int[] a = new int[] {3,9,1,10,4,20,2};
 		longest(a);
 	}
 
