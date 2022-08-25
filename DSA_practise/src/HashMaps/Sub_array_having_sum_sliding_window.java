@@ -13,6 +13,7 @@ public class Sub_array_having_sum_sliding_window {
 
 	static void findSubarray(int[] nums, int target) {
 		int windowSum = 0;
+		
 		int high = 0;
 		for (int low = 0; low < nums.length; low++) { // this is a classic technique for
 			// using while inside for to check all possibilities
