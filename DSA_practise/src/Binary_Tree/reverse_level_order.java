@@ -30,7 +30,7 @@ public class reverse_level_order {
 		if(root==null)
 			return ;
 		Stack<TreeNode> stk= new Stack<>();
-		Queue<TreeNode> q= new LinkedList<reverse_level_order.TreeNode>();
+		Queue<TreeNode> q= new LinkedList<>();
 		q.add(root);
 		while(!q.isEmpty()) {
 			root = q.peek();

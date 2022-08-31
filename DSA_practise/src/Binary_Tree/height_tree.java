@@ -86,6 +86,6 @@ public class height_tree {
 		Node root = tree.buildTree(nodes);
 		System.out.println(maxDepth(root));
 		System.out.println(diameter(root));
-		System.out.println(diameter_2(root).diameter);
+		System.out.println(diameter_2(root).height);
 	}
 }
