@@ -43,7 +43,7 @@ public class subtree_of_another_Tree {
 	public static boolean isSubTree(TreeNode root, TreeNode subRoot) {
 		if (subRoot == null)
 			return true;
-		if (root == null)
+		if (root == null) // because base null hoy to su karay etle
 			return false;
 
 		if (root.val == subRoot.val) {
