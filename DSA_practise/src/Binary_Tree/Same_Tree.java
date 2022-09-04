@@ -1,31 +1,39 @@
 package Binary_Tree;
 
+class TreeNode {
+	int val;
+	TreeNode left;
+	TreeNode right;
+
+	TreeNode() {
+	}
+
+	TreeNode(int val) {
+		this.val = val;
+	}
+
+	TreeNode(int val, TreeNode left, TreeNode right) {
+		this.val = val;
+		this.left = left;
+		this.right = right;
+	}
+}
+
 public class Same_Tree {
 
-	public class TreeNode {
-		int val;
-		TreeNode left;
-		TreeNode right;
-
-		TreeNode() {
-		}
-
-		TreeNode(int val) {
-			this.val = val;
-		}
-
-		TreeNode(int val, TreeNode left, TreeNode right) {
-			this.val = val;
-			this.left = left;
-			this.right = right;
-		}
-	}
-
 	public static void main(String[] args) {
+		TreeNode n = new TreeNode(1);
+		n.left = new TreeNode(2);
+		n.right = new TreeNode(3);
 
+		TreeNode m = new TreeNode(1);
+		m.left = new TreeNode();
+		m.right = new TreeNode(3);
+
+		System.out.println(isSameTree(n, m));
 	}
 
-	public int check_depth(TreeNode root) {
+	public static int check_depth(TreeNode root) {
 		if (root == null)
 			return 0;
 
@@ -34,7 +42,7 @@ public class Same_Tree {
 		return leftD + rightD + 1;
 	}
 
-	public boolean isSameTree(TreeNode p, TreeNode q) {
+	public static boolean isSameTree(TreeNode p, TreeNode q) {
 		if (p == null && q == null)
 			return true;
 		if (p == null || q == null)
