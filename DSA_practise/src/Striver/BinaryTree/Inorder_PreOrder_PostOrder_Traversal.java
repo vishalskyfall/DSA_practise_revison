@@ -10,11 +10,11 @@ public class Inorder_PreOrder_PostOrder_Traversal {
 		root.right = new Node(3);
 		root.left.left = new Node(4);
 		root.left.right = new Node(5);
-		root.left.right.left = new Node(8);
+//		root.left.right.left = new Node(8);
 		root.right.left = new Node(6);
 		root.right.right = new Node(7);
-		root.right.right.left = new Node(9);
-		root.right.right.right = new Node(10);
+//		root.right.right.left = new Node(9);
+//		root.right.right.right = new Node(10);
 
 		ArrayList<Integer> inOrder = new ArrayList<Integer>();
 		ArrayList<Integer> preOrder = new ArrayList<Integer>();
@@ -87,10 +87,11 @@ public class Inorder_PreOrder_PostOrder_Traversal {
 			ls.add(topNode.data);
 			s.pop();
 
-			if (topNode.right != null)
-				s.push(topNode.right);
+		
 			if (topNode.left != null)
 				s.push(topNode.left);
+			if (topNode.right != null)
+				s.push(topNode.right);
 		}
 		return ls;
 	}
