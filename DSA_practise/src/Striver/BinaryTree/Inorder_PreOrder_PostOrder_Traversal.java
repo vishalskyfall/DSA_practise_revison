@@ -55,9 +55,8 @@ public class Inorder_PreOrder_PostOrder_Traversal {
 			} else {
 				if (s.isEmpty())
 					break;
-				root = s.peek();
+				root = s.pop();
 				ls.add(root.data);
-				s.pop();
 				root = root.right;
 			}
 		}
@@ -83,15 +82,14 @@ public class Inorder_PreOrder_PostOrder_Traversal {
 		s.push(root);
 
 		while (!s.isEmpty()) {
-			Node topNode = s.peek();
-			ls.add(topNode.data);
-			s.pop();
+			root = s.pop();
+			ls.add(root.data);
+//			s.pop();
 
-		
-			if (topNode.left != null)
-				s.push(topNode.left);
-			if (topNode.right != null)
-				s.push(topNode.right);
+			if (root.left != null)
+				s.push(root.left);
+			if (root.right != null)
+				s.push(root.right);
 		}
 		return ls;
 	}
@@ -115,8 +113,7 @@ public class Inorder_PreOrder_PostOrder_Traversal {
 		s1.push(root);
 
 		while (!s1.isEmpty()) {
-			root = s1.peek();
-			s1.pop();
+			root = s1.pop();
 			s2.push(root);
 			if (root.left != null)
 				s1.push(root.left);
@@ -124,8 +121,8 @@ public class Inorder_PreOrder_PostOrder_Traversal {
 				s1.push(root.right);
 		}
 		while (!s2.isEmpty()) {
-			ls.add(s2.peek().data);
-			s2.pop();
+			ls.add(s2.pop().data);
+			
 		}
 		return ls;
 	}
