@@ -1,4 +1,4 @@
-package Striver.String;
+package Striver.heap;
 
 import java.util.Collections;
 import java.util.PriorityQueue;
